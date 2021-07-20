@@ -1,0 +1,26 @@
+node {
+    stage('Preparation') { // for display purposes
+        // Get some code from a GitHub repository
+        git branch: 'main', credentialsId: '9947c7cb-2399-4b24-9cd5-c27bab12c411', url: 'https://github.com/Hussi503/mydevopspro.git'
+        // Get the Maven tool.
+        // ** NOTE: This 'M3' Maven tool must be configured
+        // **       in the global configuration.
+       // mvnHome = tool 'M3'
+    }
+    stage('maven clean') {
+     sh 'mvn clean'
+    }
+    stage('maven compile') {
+     sh 'mvn compile'
+    }
+    stage('maven validate') {
+     sh 'mvn validate'
+    }
+    stage('maven test') {
+     sh 'mvn test'
+    }
+    stage('maven package') {
+     sh 'mvn package'
+    }
+}  
+
