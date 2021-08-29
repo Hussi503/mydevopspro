@@ -8,19 +8,19 @@ node {
         
     }
     stage('mvn clean') {
-        sh mvn clean
+        sh 'mvn clean'
     
     }
    stage('mvn test') {
-        sh mvn test
+        sh 'mvn test'
     
     }
     stage('mvn validate') {
-        sh mvn validate
+        sh 'mvn validate'
     
     }
     stage('mvn package') {
-        sh mvn package
+        sh 'mvn package'
     
     }
    
