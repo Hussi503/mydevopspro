@@ -76,7 +76,7 @@
     <repository>
       <id>deployment</id>
       <name>Releases</name>
-      <url>http://10.182.0.12/:8081/repository/maven-releases</url>
+      <url>http://10.182.0.13/:8081/repository/maven-releases</url>
     </repository>
   </distributionManagement>
 </project>
