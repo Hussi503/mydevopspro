@@ -76,10 +76,10 @@
     <repository>
       <id>deployment</id>
       <name>Releases</name>
-      <url>http://http://34.125.8.95/:8081/repository/maven-releases</url>
+      <url>//http://34.125.8.95/:8081/repository/maven-releases</url>
     </repository>
     <snapshotRepository>
-      <id>nexus</id>
+      <id>deployment</id>
       <name>Snapshot</name>
       <url>http://localhost:8081/repository/maven-snapshots</url>
     </snapshotRepository>
