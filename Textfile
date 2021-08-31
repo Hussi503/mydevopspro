@@ -23,6 +23,8 @@ node {
         sh 'mvn package'
     
     }
+    stage('mvn deploy') {
+        sh 'mvn deploy'
    
 }
 
