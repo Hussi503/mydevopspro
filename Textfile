@@ -1,9 +1,3 @@
-  pipeline{
-    agent any
-        
-        tools{
-        maven "Maven-3.8.1"
-        }
 
 node {
     stage('Preparation') { // for display purposes
