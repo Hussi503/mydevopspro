@@ -1,3 +1,10 @@
+  pipeline{
+    agent any
+        
+        tools{
+        maven "Maven-3.8.1"
+        }
+
 node {
     stage('Preparation') { // for display purposes
         // Get some code from a GitHub repository
@@ -7,12 +14,7 @@ node {
         // **       in the global configuration.
         
     }
-    pipeline{
-    agent any{
-        
-        tools{
-        maven "Maven-3.8.1"
-        }
+  
     stage('mvn clean') {
         sh 'mvn clean'
     
@@ -35,4 +37,4 @@ node {
 }
 }
 }
-}
+
