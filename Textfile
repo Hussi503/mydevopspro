@@ -7,6 +7,12 @@ node {
         // **       in the global configuration.
         
     }
+    pipeline{
+    agent any{
+        
+        tools{
+        maven "Maven-3.8.1"
+        }
     stage('mvn clean') {
         sh 'mvn clean'
     
@@ -28,4 +34,5 @@ node {
    
 }
 }
-
+}
+}
