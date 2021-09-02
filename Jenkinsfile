@@ -1,14 +1,14 @@
 pipeline
-  agent any {
-      tools {
+  agent any
+  tools{
             maven "Maven 3.6.3"
-            }
+        }
       stages {
               stage('git clone') {
-              steps              {
+              steps{
                   git branch: 'main', credentialsId: '44a23619-bf4f-4c82-b779-2d11ee265787', url: 'https://github.com/Hussi503/mydevopspro.git'
-                                 }
-                                 }          
+                    }
+                    }          
     stage('maven clean') {
                          sh 'mvn clean'
                          }
