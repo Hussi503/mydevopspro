@@ -1,12 +1,14 @@
-node {
-    stage('Preparation') { // for display purposes
-        // Get some code from a GitHub repository
-        git branch: 'main', credentialsId: '9947c7cb-2399-4b24-9cd5-c27bab12c411', url: 'https://github.com/Hussi503/jenkins.git'
-        // Get the Maven tool.
-        // ** NOTE: This 'M3' Maven tool must be configured
-        // **       in the global configuration.
-       // mvnHome = tool 'M3'
+pipeline
+  agent any {
+      tools {
+          maven "Maven 3.6.3"
+      }
+      stages {
+          stage('git clone') {
+              steps {
+                  git branch: 'main', credentialsId: '44a23619-bf4f-4c82-b779-2d11ee265787', url: 'https://github.com/Hussi503/mydevopspro.git'
     }
+          }          
     stage('maven clean') {
      sh 'mvn clean'
     }
